@@ -1,0 +1,28 @@
+# Build outputs
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Revit add-in local deployment
+*.addin.local
+*.log
+
+# NuGet
+packages/
+*.nupkg
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+
