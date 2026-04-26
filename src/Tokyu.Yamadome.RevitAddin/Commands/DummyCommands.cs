@@ -10,7 +10,6 @@ namespace Tokyu.Yamadome.RevitAddin.Commands
     public class FixExcavationModelCommand : DummyCommandBase { protected override string CommandName => "掘削モデル修正"; protected override string SourceDynamo => "04_掘削モデル自動修正"; }
     public class CreateModelLinesCommand : DummyCommandBase { protected override string CommandName => "モデル線分生成"; protected override string SourceDynamo => "03_面にモデル線分を生成"; }
     public class JoinExcavationLinesCommand : DummyCommandBase { protected override string CommandName => "掘削ライン結合"; protected override string SourceDynamo => "20_掘削ライン結合"; }
-    public class CreateRetainingWallCommand : DummyCommandBase { protected override string CommandName => "山留め壁作成"; protected override string SourceDynamo => "05_山留め壁作成"; }
     public class CreateWalerCommand : DummyCommandBase { protected override string CommandName => "腹起し作成"; protected override string SourceDynamo => "06_腹起し作成"; }
     public class CreateStrutCommand : DummyCommandBase { protected override string CommandName => "切梁作成"; protected override string SourceDynamo => "07_切梁作成"; }
     public class CreateCornerBraceCommand : DummyCommandBase { protected override string CommandName => "火打ち作成"; protected override string SourceDynamo => "08_隅火打ち作成"; }
@@ -37,4 +36,3 @@ namespace Tokyu.Yamadome.RevitAddin.Commands
     public class TransferViewTemplateCommand : DummyCommandBase { protected override string CommandName => "ビューテンプレート転送"; protected override string SourceDynamo => "36_ビューテンプレート転送"; }
     public class YamadomeScheduleCommand : DummyCommandBase { protected override string CommandName => "山留め集計"; protected override string SourceDynamo => "18_山留め集計"; }
 }
-
