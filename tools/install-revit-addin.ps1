@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
-$projectPath = Join-Path $repoRoot "src\Tokyu.Yamadome.RevitAddin\Tokyu.Yamadome.RevitAddin.csproj"
+$solutionPath = Join-Path $repoRoot "Tokyu.Yamadome.RevitAddin.sln"
 $assemblyPath = Join-Path $repoRoot "src\Tokyu.Yamadome.RevitAddin\bin\$Configuration\Tokyu.Yamadome.RevitAddin.dll"
 $addinDir = Join-Path $env:APPDATA "Autodesk\Revit\Addins\$RevitVersion"
 $addinPath = Join-Path $addinDir "Tokyu.Yamadome.RevitAddin.addin"
@@ -16,7 +16,7 @@ if (-not (Test-Path $msbuild)) {
     throw "MSBuild was not found: $msbuild"
 }
 
-& $msbuild $projectPath /p:Configuration=$Configuration /p:Platform="Any CPU" /m
+& $msbuild $solutionPath /p:Configuration=$Configuration /p:Platform="Any CPU" /m
 if ($LASTEXITCODE -ne 0) {
     throw "Build failed."
 }
@@ -43,4 +43,3 @@ Write-Output "Installed Revit add-in manifest:"
 Write-Output $addinPath
 Write-Output "Assembly:"
 Write-Output $assemblyPath
-
