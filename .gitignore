@@ -26,3 +26,5 @@ packages/
 *.bak
 ~$*
 
+# Local proposal / estimate documents
+Document/
