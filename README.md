@@ -35,3 +35,23 @@
 - [リボンタブ・パネル・コマンド構成案](docs/ribbon-structure.md)
 - [開発メモ](docs/development-notes.md)
 
+## 開発用ビルド
+
+```powershell
+& 'C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe' .\Tokyu.Yamadome.RevitAddin.sln /p:Configuration=Debug /p:Platform="Any CPU" /m
+```
+
+## Revit 2023への開発用登録
+
+```powershell
+.\tools\install-revit-addin.ps1
+```
+
+上記を実行すると、ビルド後に `%APPDATA%\Autodesk\Revit\Addins\2023\Tokyu.Yamadome.RevitAddin.addin` を作成します。
+Revit 2023を起動すると、暫定タブ「生産技術部」にダミーコマンド群が表示されます。
+
+## アイコン再生成
+
+```powershell
+.\tools\generate-placeholder-icons.ps1
+```
